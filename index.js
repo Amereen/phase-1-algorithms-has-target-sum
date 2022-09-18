@@ -1,7 +1,19 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  let pastNum = {}
+  for (const number of array){
+   
+    const missingNum = target - number
+     
+    if(pastNum[missingNum])return true  
+pastNum[number]= true
+  }
+  return false 
 }
 
+ 
+
+// const array = [4,5,1,6]
+// console.log(array.includes(-1))
 /* 
   Write the Big O time complexity of your function here
 */
